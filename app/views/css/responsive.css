@@ -1,0 +1,31 @@
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 740px) and (max-width: 1023px) {
+    main {
+        overflow: auto;
+    }
+
+    .container#table-result {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 740px) {
+    main {
+        overflow: auto;
+    }
+
+    main.m-5 {
+        margin: 3rem 1rem !important;
+    }
+
+    .container#table-result {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}

@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#formSearch').submit(function(e) {
-        e.preventDefault();     // Dừng hành động submit của form
+
+    function Search() {
         var searchValue = $("input[name='search']").val();      // Lấy value ở ô input
         $.ajax({
             type: 'GET',    // phương thức GET
@@ -14,6 +14,15 @@ $(document).ready(function() {
             error: function() {
                 alert("Your request is no valid!");
             }
-        })
+        });
+    }
+
+    $('#formSearch').submit(function(e) {
+        e.preventDefault();     // Dừng hành động submit của form
+        Search();
+    });
+
+    $("input.form-control.mr-sm-2").keyup(function () {
+        Search();
     });
 })
